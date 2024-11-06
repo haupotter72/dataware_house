@@ -1,0 +1,2202 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>warehousesass</ID>
+  <Name>warehousesass</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <Dimensions>
+    <Dimension>
+      <ID>DIM Postion Player</ID>
+      <Name>DIM Postion Player</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>Wasehouse</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Player Positions</ID>
+          <Name>Player Positions</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_postionPlayer</TableID>
+                <ColumnID>player_positions</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Name Club</ID>
+      <Name>Name Club</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>Wasehouse</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Club Name</ID>
+          <Name>Club Name</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_nameClub</TableID>
+                <ColumnID>club_name</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Fact1</ID>
+      <Name>Fact1</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>Wasehouse</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Dob</ID>
+          <Name>Dob</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Date</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_Fact1</TableID>
+                <ColumnID>dob</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Fact1 1</ID>
+      <Name>Fact1 1</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>Wasehouse</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>Sofifa Id</ID>
+          <Name>Sofifa Id</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_Fact1</TableID>
+                <ColumnID>sofifa_id</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+  </Dimensions>
+  <Cubes>
+    <Cube>
+      <ID>Wasehouse</ID>
+      <Name>Wasehouse</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2298" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9885" y="11049" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact1" left="-1948" top="-3789" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5249" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00008114000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_Fact1" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_postionPlayer" left="-1027" top="2968" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3006" height="1143" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000be0b000077040000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_postionPlayer" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="nameClub" left="4058" top="-4101" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00008c040000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_nameClub" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-2298</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-5000</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>-1948</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>-4101</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Dimensions>
+        <Dimension>
+          <ID>Fact1</ID>
+          <Name>Fact1</Name>
+          <DimensionID>Fact1</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Dob</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Fact1 1</ID>
+          <Name>Fact1 1</Name>
+          <DimensionID>Fact1 1</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Sofifa Id</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>DIM Postion Player</ID>
+          <Name>DIM Postion Player</Name>
+          <DimensionID>DIM Postion Player</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Player Positions</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>Name Club</ID>
+          <Name>Name Club</Name>
+          <DimensionID>Name Club</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Club Name</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup>
+          <ID>Fact1</ID>
+          <Name>Fact1</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>Sofifa Id</ID>
+              <Name>Sofifa Id</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>sofifa_id</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Overall</ID>
+              <Name>Overall</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>overall</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Potential</ID>
+              <Name>Potential</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>potential</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Value Eur</ID>
+              <Name>Value Eur</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>value_eur</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Wage Eur</ID>
+              <Name>Wage Eur</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>wage_eur</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Age</ID>
+              <Name>Age</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>age</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Height Cm</ID>
+              <Name>Height Cm</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>height_cm</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Weight Kg</ID>
+              <Name>Weight Kg</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>weight_kg</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Club Team Id</ID>
+              <Name>Club Team Id</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>club_team_id</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>League Level</ID>
+              <Name>League Level</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>league_level</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Club Jersey Number</ID>
+              <Name>Club Jersey Number</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>club_jersey_number</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Club Contract Valid Until</ID>
+              <Name>Club Contract Valid Until</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>club_contract_valid_until</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Nationality Id</ID>
+              <Name>Nationality Id</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>nationality_id</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Nation Team Id</ID>
+              <Name>Nation Team Id</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>nation_team_id</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Nation Jersey Number</ID>
+              <Name>Nation Jersey Number</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>nation_jersey_number</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Weak Foot</ID>
+              <Name>Weak Foot</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>weak_foot</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Skill Moves</ID>
+              <Name>Skill Moves</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>skill_moves</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>International Reputation</ID>
+              <Name>International Reputation</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>international_reputation</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Pace</ID>
+              <Name>Pace</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>pace</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Shooting</ID>
+              <Name>Shooting</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>shooting</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Passing</ID>
+              <Name>Passing</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>passing</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Dribbling</ID>
+              <Name>Dribbling</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>dribbling</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Defending</ID>
+              <Name>Defending</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>defending</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Physic</ID>
+              <Name>Physic</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>physic</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Attacking Crossing</ID>
+              <Name>Attacking Crossing</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>attacking_crossing</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Attacking Finishing</ID>
+              <Name>Attacking Finishing</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>attacking_finishing</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Attacking Heading Accuracy</ID>
+              <Name>Attacking Heading Accuracy</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>attacking_heading_accuracy</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Attacking Short Passing</ID>
+              <Name>Attacking Short Passing</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>attacking_short_passing</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Attacking Volleys</ID>
+              <Name>Attacking Volleys</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>attacking_volleys</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Skill Dribbling</ID>
+              <Name>Skill Dribbling</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>skill_dribbling</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Skill Curve</ID>
+              <Name>Skill Curve</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>skill_curve</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Skill Fk Accuracy</ID>
+              <Name>Skill Fk Accuracy</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>skill_fk_accuracy</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Skill Long Passing</ID>
+              <Name>Skill Long Passing</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>skill_long_passing</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Skill Ball Control</ID>
+              <Name>Skill Ball Control</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>skill_ball_control</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Movement Acceleration</ID>
+              <Name>Movement Acceleration</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>movement_acceleration</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Movement Sprint Speed</ID>
+              <Name>Movement Sprint Speed</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>movement_sprint_speed</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Movement Agility</ID>
+              <Name>Movement Agility</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>movement_agility</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Movement Reactions</ID>
+              <Name>Movement Reactions</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>movement_reactions</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Movement Balance</ID>
+              <Name>Movement Balance</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>movement_balance</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Power Shot Power</ID>
+              <Name>Power Shot Power</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>power_shot_power</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Power Jumping</ID>
+              <Name>Power Jumping</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>power_jumping</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Power Stamina</ID>
+              <Name>Power Stamina</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>power_stamina</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Power Strength</ID>
+              <Name>Power Strength</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>power_strength</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Power Long Shots</ID>
+              <Name>Power Long Shots</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>power_long_shots</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Mentality Aggression</ID>
+              <Name>Mentality Aggression</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>mentality_aggression</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Mentality Interceptions</ID>
+              <Name>Mentality Interceptions</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>mentality_interceptions</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Mentality Positioning</ID>
+              <Name>Mentality Positioning</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>mentality_positioning</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Mentality Vision</ID>
+              <Name>Mentality Vision</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>mentality_vision</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Mentality Penalties</ID>
+              <Name>Mentality Penalties</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>mentality_penalties</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Defending Marking Awareness</ID>
+              <Name>Defending Marking Awareness</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>defending_marking_awareness</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Defending Standing Tackle</ID>
+              <Name>Defending Standing Tackle</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>defending_standing_tackle</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Defending Sliding Tackle</ID>
+              <Name>Defending Sliding Tackle</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>defending_sliding_tackle</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Goalkeeping Diving</ID>
+              <Name>Goalkeeping Diving</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>goalkeeping_diving</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Goalkeeping Handling</ID>
+              <Name>Goalkeeping Handling</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>goalkeeping_handling</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Goalkeeping Kicking</ID>
+              <Name>Goalkeeping Kicking</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>goalkeeping_kicking</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Goalkeeping Positioning</ID>
+              <Name>Goalkeeping Positioning</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>goalkeeping_positioning</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Goalkeeping Reflexes</ID>
+              <Name>Goalkeeping Reflexes</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>goalkeeping_reflexes</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Goalkeeping Speed</ID>
+              <Name>Goalkeeping Speed</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_Fact1</TableID>
+                  <ColumnID>goalkeeping_speed</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Fact1 Count</ID>
+              <Name>Fact1 Count</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_Fact1</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Fact1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dob</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Date</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_Fact1</TableID>
+                        <ColumnID>dob</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Fact1 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Sofifa Id</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Double</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_Fact1</TableID>
+                        <ColumnID>sofifa_id</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>Fact1</ID>
+              <Name>Fact1</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>Wasehouse</DataSourceViewID>
+                <TableID>dbo_Fact1</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+      </MeasureGroups>
+      <Source>
+        <DataSourceViewID>Wasehouse</DataSourceViewID>
+      </Source>
+    </Cube>
+  </Cubes>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>Wasehouse</ID>
+      <Name>Wasehouse</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=MSOLEDBSQL.1;Data Source=LAPTOP-9H355TDU\SQLEXPRESS;Password=;User ID=;Initial Catalog=wasehouse</ConnectionString>
+      <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>Wasehouse</ID>
+      <Name>Wasehouse</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+          <Value>1</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+          <Value></Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout>
+                  <dds>
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="6" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9341" scrolltop="-5430" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="10478" y="12340" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                      <font>
+                        <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                      </font>
+                      <mouseicon>
+                        <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                      </mouseicon>
+                    </diagram>
+                    <layoutmanager>
+                      <ddsxmlobj />
+                    </layoutmanager>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="26789" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5249" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e00008114000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_Fact1" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_postionPlayer" left="20529" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3260" height="1228" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000bc0c0000cc040000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_DIM_postionPlayer" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dimcost" left="12280" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="5249" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e00008114000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_Dimcost" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="20" top="0" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="1228" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000cc040000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_nameClub" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="6020" top="0" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3260" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000bc0c000003090000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_Fact" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                  </dds>
+</DiagramLayout>
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>9341</DiagramViewPortLeft>
+                <DiagramViewPortTop>-5430</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>75</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>Wasehouse</DataSourceID>
+      <Schema>
+        <xs:schema id="Wasehouse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="Wasehouse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="2d0ecbf5-da10-48da-89bd-b837f3afed99">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_Fact1" msprop:design-time-name="415a89c9-18fa-4589-83bb-af8504d5452e" msprop:FriendlyName="Fact1" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="Fact1">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="sofifa_id" msprop:FriendlyName="sofifa_id" msprop:DbColumnName="sofifa_id" msprop:design-time-name="782df481-03fb-47a1-86ba-03b51b02e757" type="xs:double" minOccurs="0" />
+                      <xs:element name="player_url" msprop:FriendlyName="player_url" msprop:DbColumnName="player_url" msprop:design-time-name="f1301901-9238-4f98-9b54-4bbf5d1a0b95" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="short_name" msprop:FriendlyName="short_name" msprop:DbColumnName="short_name" msprop:design-time-name="45b1de97-20a2-4fa2-b8cb-9c5b4a34e7d8" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="long_name" msprop:FriendlyName="long_name" msprop:DbColumnName="long_name" msprop:design-time-name="a3209059-e2eb-4da3-90e8-3714eeae92e9" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="player_positions" msprop:FriendlyName="player_positions" msprop:DbColumnName="player_positions" msprop:design-time-name="8824de51-10d5-46bc-bb9f-cd140ef17d96" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="overall" msprop:FriendlyName="overall" msprop:DbColumnName="overall" msprop:design-time-name="a548bf4f-ec05-431e-936d-4c2e91802503" type="xs:double" minOccurs="0" />
+                      <xs:element name="potential" msprop:FriendlyName="potential" msprop:DbColumnName="potential" msprop:design-time-name="13135fff-a9e0-407c-977e-8c4d81218ba3" type="xs:double" minOccurs="0" />
+                      <xs:element name="value_eur" msprop:FriendlyName="value_eur" msprop:DbColumnName="value_eur" msprop:design-time-name="b3ab150a-7e57-468c-bdbc-cf2839d3f372" type="xs:double" minOccurs="0" />
+                      <xs:element name="wage_eur" msprop:FriendlyName="wage_eur" msprop:DbColumnName="wage_eur" msprop:design-time-name="bf8558ae-a882-498b-aa6f-e13a8f403b7a" type="xs:double" minOccurs="0" />
+                      <xs:element name="age" msprop:FriendlyName="age" msprop:DbColumnName="age" msprop:design-time-name="dc260586-2563-47b3-a61b-a9b584312697" type="xs:double" minOccurs="0" />
+                      <xs:element name="dob" msprop:FriendlyName="dob" msprop:DbColumnName="dob" msprop:design-time-name="098600fd-58d4-4d56-9f4b-afff67d3735c" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="height_cm" msprop:FriendlyName="height_cm" msprop:DbColumnName="height_cm" msprop:design-time-name="07a6d8c9-fee1-4975-a813-300b89f51e60" type="xs:double" minOccurs="0" />
+                      <xs:element name="weight_kg" msprop:FriendlyName="weight_kg" msprop:DbColumnName="weight_kg" msprop:design-time-name="f6e47b47-324a-41e6-82cc-2a4d91929ca1" type="xs:double" minOccurs="0" />
+                      <xs:element name="club_team_id" msprop:FriendlyName="club_team_id" msprop:DbColumnName="club_team_id" msprop:design-time-name="418d8aef-a180-4bb4-9714-67af2311e956" type="xs:double" minOccurs="0" />
+                      <xs:element name="club_name" msprop:FriendlyName="club_name" msprop:DbColumnName="club_name" msprop:design-time-name="ab29b170-c9db-45c8-8de7-5c34257225da" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="league_name" msprop:FriendlyName="league_name" msprop:DbColumnName="league_name" msprop:design-time-name="a3cb137a-0ad8-4513-b5ca-b4fd9ad7c071" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="league_level" msprop:FriendlyName="league_level" msprop:DbColumnName="league_level" msprop:design-time-name="e8189992-0536-42ee-8caa-1f78e39cf4b1" type="xs:double" minOccurs="0" />
+                      <xs:element name="club_position" msprop:FriendlyName="club_position" msprop:DbColumnName="club_position" msprop:design-time-name="ee7f53fc-85af-47d5-8480-a178f676994d" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_jersey_number" msprop:FriendlyName="club_jersey_number" msprop:DbColumnName="club_jersey_number" msprop:design-time-name="b48b08e2-94ce-485a-918b-928af28e82cb" type="xs:double" minOccurs="0" />
+                      <xs:element name="club_loaned_from" msprop:FriendlyName="club_loaned_from" msprop:DbColumnName="club_loaned_from" msprop:design-time-name="fcd335a1-8813-4457-82bc-2c8503bcd806" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_joined" msprop:FriendlyName="club_joined" msprop:DbColumnName="club_joined" msprop:design-time-name="1ad8cd49-9a20-43d0-9406-98f18884d801" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="club_contract_valid_until" msprop:FriendlyName="club_contract_valid_until" msprop:DbColumnName="club_contract_valid_until" msprop:design-time-name="ce30b752-da12-4d32-a29b-492511afd49b" type="xs:double" minOccurs="0" />
+                      <xs:element name="nationality_id" msprop:FriendlyName="nationality_id" msprop:DbColumnName="nationality_id" msprop:design-time-name="469ec28a-b963-4fbb-8587-4d7d4e99f734" type="xs:double" minOccurs="0" />
+                      <xs:element name="nationality_name" msprop:FriendlyName="nationality_name" msprop:DbColumnName="nationality_name" msprop:design-time-name="aead1f66-ee1d-4c69-b0f9-a8798f20a07a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nation_team_id" msprop:FriendlyName="nation_team_id" msprop:DbColumnName="nation_team_id" msprop:design-time-name="c23b23e0-4a19-4b39-9e4d-c5d4349cda5f" type="xs:double" minOccurs="0" />
+                      <xs:element name="nation_position" msprop:FriendlyName="nation_position" msprop:DbColumnName="nation_position" msprop:design-time-name="c9d6468c-943e-47a7-8079-63e213b88604" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nation_jersey_number" msprop:FriendlyName="nation_jersey_number" msprop:DbColumnName="nation_jersey_number" msprop:design-time-name="a3f55067-32ca-453a-ba7e-dac453256e55" type="xs:double" minOccurs="0" />
+                      <xs:element name="preferred_foot" msprop:FriendlyName="preferred_foot" msprop:DbColumnName="preferred_foot" msprop:design-time-name="db460670-5672-4f80-aab1-93bcc4b90b58" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="weak_foot" msprop:FriendlyName="weak_foot" msprop:DbColumnName="weak_foot" msprop:design-time-name="aab3732d-6d52-4adc-9bb3-0950ca6782de" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_moves" msprop:FriendlyName="skill_moves" msprop:DbColumnName="skill_moves" msprop:design-time-name="fff7ce5d-bab0-4da6-906d-feaed91d35b7" type="xs:double" minOccurs="0" />
+                      <xs:element name="international_reputation" msprop:FriendlyName="international_reputation" msprop:DbColumnName="international_reputation" msprop:design-time-name="74d739e5-6db7-4a6a-919a-6a653deaf22d" type="xs:double" minOccurs="0" />
+                      <xs:element name="work_rate" msprop:FriendlyName="work_rate" msprop:DbColumnName="work_rate" msprop:design-time-name="336384e0-7054-45ee-98e5-7c2f3fb4974c" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="body_type" msprop:FriendlyName="body_type" msprop:DbColumnName="body_type" msprop:design-time-name="9e1cd423-cf92-4488-bfb1-5c6dcdc1b011" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="real_face" msprop:FriendlyName="real_face" msprop:DbColumnName="real_face" msprop:design-time-name="f462181f-cd24-460c-8c1c-c7bd259d2d39" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="release_clause_eur" msprop:FriendlyName="release_clause_eur" msprop:DbColumnName="release_clause_eur" msprop:design-time-name="cb3bc769-38ff-45ce-85c3-74c1c43f548a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="player_tags" msprop:FriendlyName="player_tags" msprop:DbColumnName="player_tags" msprop:design-time-name="eed696b2-22ac-4a90-a2a2-394cf4193bd2" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="player_traits" msprop:FriendlyName="player_traits" msprop:DbColumnName="player_traits" msprop:design-time-name="8e22ecd4-5384-42b1-9a40-b4f7e04551b7" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="pace" msprop:FriendlyName="pace" msprop:DbColumnName="pace" msprop:design-time-name="1a9a0931-b4b6-4385-8b37-275b9d5ee9fe" type="xs:double" minOccurs="0" />
+                      <xs:element name="shooting" msprop:FriendlyName="shooting" msprop:DbColumnName="shooting" msprop:design-time-name="aad46044-da42-4ff0-9ee7-7a2a2a0c41bd" type="xs:double" minOccurs="0" />
+                      <xs:element name="passing" msprop:FriendlyName="passing" msprop:DbColumnName="passing" msprop:design-time-name="c215fd99-8732-4f05-abaf-3e364a721146" type="xs:double" minOccurs="0" />
+                      <xs:element name="dribbling" msprop:FriendlyName="dribbling" msprop:DbColumnName="dribbling" msprop:design-time-name="9eb0e383-24ed-428c-913d-244eb1dd70d7" type="xs:double" minOccurs="0" />
+                      <xs:element name="defending" msprop:FriendlyName="defending" msprop:DbColumnName="defending" msprop:design-time-name="a02068ea-f887-4dd4-871b-e8ee8c97e563" type="xs:double" minOccurs="0" />
+                      <xs:element name="physic" msprop:FriendlyName="physic" msprop:DbColumnName="physic" msprop:design-time-name="13023534-ef7a-43cf-bc70-627af9197636" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_crossing" msprop:FriendlyName="attacking_crossing" msprop:DbColumnName="attacking_crossing" msprop:design-time-name="0da7fcae-0de3-47a1-b65c-952b3664ce67" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_finishing" msprop:FriendlyName="attacking_finishing" msprop:DbColumnName="attacking_finishing" msprop:design-time-name="8acc555d-38b7-42d1-9695-f79489ab5e00" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_heading_accuracy" msprop:FriendlyName="attacking_heading_accuracy" msprop:DbColumnName="attacking_heading_accuracy" msprop:design-time-name="130792d8-ebe9-4124-b357-995e0eea5947" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_short_passing" msprop:FriendlyName="attacking_short_passing" msprop:DbColumnName="attacking_short_passing" msprop:design-time-name="0cefe0ac-998e-4c22-a07a-6b469ef2a7f4" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_volleys" msprop:FriendlyName="attacking_volleys" msprop:DbColumnName="attacking_volleys" msprop:design-time-name="bd6af92f-84a5-4b4f-8e9f-b65abda3e606" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_dribbling" msprop:FriendlyName="skill_dribbling" msprop:DbColumnName="skill_dribbling" msprop:design-time-name="e7a49fc3-b9b7-4598-8029-f0f426c167a4" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_curve" msprop:FriendlyName="skill_curve" msprop:DbColumnName="skill_curve" msprop:design-time-name="979a6329-836b-4f55-a85a-224f48354b60" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_fk_accuracy" msprop:FriendlyName="skill_fk_accuracy" msprop:DbColumnName="skill_fk_accuracy" msprop:design-time-name="d9cc6f0d-fbc7-4676-9cc1-2cb2bcd50896" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_long_passing" msprop:FriendlyName="skill_long_passing" msprop:DbColumnName="skill_long_passing" msprop:design-time-name="9289ae63-b987-4c65-a750-3b20f9ba0953" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_ball_control" msprop:FriendlyName="skill_ball_control" msprop:DbColumnName="skill_ball_control" msprop:design-time-name="53394f5c-a1b8-4d7f-b97d-d00543cf3d1a" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_acceleration" msprop:FriendlyName="movement_acceleration" msprop:DbColumnName="movement_acceleration" msprop:design-time-name="0e36cb0e-cf79-47d4-8d53-f7de3e926851" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_sprint_speed" msprop:FriendlyName="movement_sprint_speed" msprop:DbColumnName="movement_sprint_speed" msprop:design-time-name="18d9393c-e871-4a37-838c-73e71cdaeb10" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_agility" msprop:FriendlyName="movement_agility" msprop:DbColumnName="movement_agility" msprop:design-time-name="d38f92af-dc18-4d29-9512-c2c10b9200c9" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_reactions" msprop:FriendlyName="movement_reactions" msprop:DbColumnName="movement_reactions" msprop:design-time-name="818bae74-415d-4514-b5bc-de35b6c76ae5" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_balance" msprop:FriendlyName="movement_balance" msprop:DbColumnName="movement_balance" msprop:design-time-name="2e227c33-20be-46c9-a87a-7f2d21bf584e" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_shot_power" msprop:FriendlyName="power_shot_power" msprop:DbColumnName="power_shot_power" msprop:design-time-name="16651aec-ed8b-465d-93f5-5a48b4e2f58a" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_jumping" msprop:FriendlyName="power_jumping" msprop:DbColumnName="power_jumping" msprop:design-time-name="3d572a4c-5fa0-4eca-b02c-d981eda90add" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_stamina" msprop:FriendlyName="power_stamina" msprop:DbColumnName="power_stamina" msprop:design-time-name="871e9242-9899-4c49-92e1-af5c49f4c8ea" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_strength" msprop:FriendlyName="power_strength" msprop:DbColumnName="power_strength" msprop:design-time-name="b7c3eb2c-f0ff-48ad-84db-14ceada94421" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_long_shots" msprop:FriendlyName="power_long_shots" msprop:DbColumnName="power_long_shots" msprop:design-time-name="5208019b-89af-423e-bdec-e11fbf95f03b" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_aggression" msprop:FriendlyName="mentality_aggression" msprop:DbColumnName="mentality_aggression" msprop:design-time-name="52dbdc7a-2d01-4c3f-89fb-e45d3c231a78" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_interceptions" msprop:FriendlyName="mentality_interceptions" msprop:DbColumnName="mentality_interceptions" msprop:design-time-name="767e23b1-40b0-4c14-b5cc-6a0d03ab2d5a" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_positioning" msprop:FriendlyName="mentality_positioning" msprop:DbColumnName="mentality_positioning" msprop:design-time-name="68ce1673-a553-48f4-8318-348d6854866b" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_vision" msprop:FriendlyName="mentality_vision" msprop:DbColumnName="mentality_vision" msprop:design-time-name="30651963-9c77-4aee-add9-3140239bc277" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_penalties" msprop:FriendlyName="mentality_penalties" msprop:DbColumnName="mentality_penalties" msprop:design-time-name="6cac33b4-a798-4242-8c81-28a8bab4e40e" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_composure" msprop:FriendlyName="mentality_composure" msprop:DbColumnName="mentality_composure" msprop:design-time-name="403f5960-b56a-47db-842b-a03cf5cca416" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="defending_marking_awareness" msprop:FriendlyName="defending_marking_awareness" msprop:DbColumnName="defending_marking_awareness" msprop:design-time-name="376c1a42-c5b9-4204-9317-ca636c8188d5" type="xs:double" minOccurs="0" />
+                      <xs:element name="defending_standing_tackle" msprop:FriendlyName="defending_standing_tackle" msprop:DbColumnName="defending_standing_tackle" msprop:design-time-name="4437e185-a746-4967-bc7a-41b9058465fd" type="xs:double" minOccurs="0" />
+                      <xs:element name="defending_sliding_tackle" msprop:FriendlyName="defending_sliding_tackle" msprop:DbColumnName="defending_sliding_tackle" msprop:design-time-name="3ad0a954-7ce8-43f3-aa03-318598576fe3" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_diving" msprop:FriendlyName="goalkeeping_diving" msprop:DbColumnName="goalkeeping_diving" msprop:design-time-name="ab76541f-2e5c-436a-ba1a-e1a80ff8c1d2" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_handling" msprop:FriendlyName="goalkeeping_handling" msprop:DbColumnName="goalkeeping_handling" msprop:design-time-name="16d7057b-f307-4619-83ba-aaabc8ecac58" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_kicking" msprop:FriendlyName="goalkeeping_kicking" msprop:DbColumnName="goalkeeping_kicking" msprop:design-time-name="d7870943-f592-427b-96d1-d65173ae8baa" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_positioning" msprop:FriendlyName="goalkeeping_positioning" msprop:DbColumnName="goalkeeping_positioning" msprop:design-time-name="65ab8e98-bc07-4045-8914-9fce4d80e481" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_reflexes" msprop:FriendlyName="goalkeeping_reflexes" msprop:DbColumnName="goalkeeping_reflexes" msprop:design-time-name="23fc2b35-3ec5-4c94-912a-152e946d2d9f" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_speed" msprop:FriendlyName="goalkeeping_speed" msprop:DbColumnName="goalkeeping_speed" msprop:design-time-name="02f9d84c-4779-4dc4-b020-7b51dfa13c09" type="xs:double" minOccurs="0" />
+                      <xs:element name="ls" msprop:FriendlyName="ls" msprop:DbColumnName="ls" msprop:design-time-name="eca54efd-93b9-4fe8-8162-01170936dd79" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="st" msprop:FriendlyName="st" msprop:DbColumnName="st" msprop:design-time-name="0245dc64-9f92-435f-a12b-ce22ef0598e1" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rs" msprop:FriendlyName="rs" msprop:DbColumnName="rs" msprop:design-time-name="672a7ea2-d836-4cc9-b7c7-1408cb7b11a5" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lw" msprop:FriendlyName="lw" msprop:DbColumnName="lw" msprop:design-time-name="3945b66e-2a08-4ed2-ae0d-5308bcd34115" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lf" msprop:FriendlyName="lf" msprop:DbColumnName="lf" msprop:design-time-name="70e6f960-ce2e-4683-93de-03d4753324ca" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cf" msprop:FriendlyName="cf" msprop:DbColumnName="cf" msprop:design-time-name="5bb384db-9e67-4983-bc26-83c08c6db1db" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rf" msprop:FriendlyName="rf" msprop:DbColumnName="rf" msprop:design-time-name="8797cbb4-02af-4510-9df2-2aed952ec502" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rw" msprop:FriendlyName="rw" msprop:DbColumnName="rw" msprop:design-time-name="5347b15a-ff70-4d17-8847-89162ccbb36e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lam" msprop:FriendlyName="lam" msprop:DbColumnName="lam" msprop:design-time-name="a927f474-4904-4e48-87e4-e68a40f040dd" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cam" msprop:FriendlyName="cam" msprop:DbColumnName="cam" msprop:design-time-name="ed2fdf75-380f-48b0-b0ac-cd2ce9bc6d42" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ram" msprop:FriendlyName="ram" msprop:DbColumnName="ram" msprop:design-time-name="d1f50890-7452-48b2-8923-ec4f8a348a26" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lm" msprop:FriendlyName="lm" msprop:DbColumnName="lm" msprop:design-time-name="897a6597-33ea-492b-8a0a-454bc52ca26b" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lcm" msprop:FriendlyName="lcm" msprop:DbColumnName="lcm" msprop:design-time-name="8d3cbdde-bbe0-4551-b0b8-e8977ad19d89" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cm" msprop:FriendlyName="cm" msprop:DbColumnName="cm" msprop:design-time-name="0655e894-45b2-494a-b951-48c04681aeb9" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rcm" msprop:FriendlyName="rcm" msprop:DbColumnName="rcm" msprop:design-time-name="74483ba9-de4d-466d-bd86-a3d00359989f" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rm" msprop:FriendlyName="rm" msprop:DbColumnName="rm" msprop:design-time-name="4761c7ab-7ecb-451d-85c1-06405c6f5a42" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lwb" msprop:FriendlyName="lwb" msprop:DbColumnName="lwb" msprop:design-time-name="24763356-abdc-482f-ab3c-d55bfa5acb8b" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ldm" msprop:FriendlyName="ldm" msprop:DbColumnName="ldm" msprop:design-time-name="dcca750a-88fb-48b4-9a4c-e02fdc1aaa42" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cdm" msprop:FriendlyName="cdm" msprop:DbColumnName="cdm" msprop:design-time-name="2f427cdb-cb95-4f65-9ebb-5e466c4a396b" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rdm" msprop:FriendlyName="rdm" msprop:DbColumnName="rdm" msprop:design-time-name="da4f304d-747a-4786-9cc0-72595e26c8b9" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rwb" msprop:FriendlyName="rwb" msprop:DbColumnName="rwb" msprop:design-time-name="696c2712-4526-4618-819f-543546cf2c40" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lb" msprop:FriendlyName="lb" msprop:DbColumnName="lb" msprop:design-time-name="b52b482e-a82b-4917-9b7b-6652b103554a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lcb" msprop:FriendlyName="lcb" msprop:DbColumnName="lcb" msprop:design-time-name="2cd60034-b95b-42c2-9324-80bcc0eced4a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cb" msprop:FriendlyName="cb" msprop:DbColumnName="cb" msprop:design-time-name="833a9054-93fc-470b-b274-5325a5bfc4fc" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rcb" msprop:FriendlyName="rcb" msprop:DbColumnName="rcb" msprop:design-time-name="b2c72fd7-7d5a-45eb-9f67-29b9c2a48152" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rb" msprop:FriendlyName="rb" msprop:DbColumnName="rb" msprop:design-time-name="80bb7b28-c6b9-416d-ba98-465e4dc49ab6" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="gk" msprop:FriendlyName="gk" msprop:DbColumnName="gk" msprop:design-time-name="9aeb8c70-5fd6-41ce-b497-07b2841c65c5" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="player_face_url" msprop:FriendlyName="player_face_url" msprop:DbColumnName="player_face_url" msprop:design-time-name="c7e8c587-aefd-4d29-96f5-18b1399458d3" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_logo_url" msprop:FriendlyName="club_logo_url" msprop:DbColumnName="club_logo_url" msprop:design-time-name="316a2c6f-f50f-454d-8643-201288621492" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_flag_url" msprop:FriendlyName="club_flag_url" msprop:DbColumnName="club_flag_url" msprop:design-time-name="a0241add-1e30-407c-b829-a6c0fd345a2f" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nation_logo_url" msprop:FriendlyName="nation_logo_url" msprop:DbColumnName="nation_logo_url" msprop:design-time-name="c0d387fc-4395-438b-9e42-b5eea2e556bf" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nation_flag_url" msprop:FriendlyName="nation_flag_url" msprop:DbColumnName="nation_flag_url" msprop:design-time-name="1970836d-5518-47b9-b114-26c72e50c95e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DIM_postionPlayer" msprop:design-time-name="7e57f3e0-2e27-4bde-a043-2cecc4e3f204" msprop:FriendlyName="DIM_postionPlayer" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_postionPlayer">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="player_positions" msprop:FriendlyName="player_positions" msprop:DbColumnName="player_positions" msprop:design-time-name="426147c1-cf89-4334-83f9-3cec7378076e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_Dimcost" msprop:design-time-name="0421bd60-01f9-4bbe-b2b0-be8298e1b0ea" msprop:FriendlyName="Dimcost" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="Dimcost">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="sofifa_id" msprop:FriendlyName="sofifa_id" msprop:DbColumnName="sofifa_id" msprop:design-time-name="9d57285e-a311-43af-b190-b56ec54e2f02" type="xs:double" minOccurs="0" />
+                      <xs:element name="player_url" msprop:FriendlyName="player_url" msprop:DbColumnName="player_url" msprop:design-time-name="4af8a156-71f3-4f76-b69a-1bc96604560e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="short_name" msprop:FriendlyName="short_name" msprop:DbColumnName="short_name" msprop:design-time-name="794d4ab9-da9c-449e-a5d6-5772e342bdbb" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="long_name" msprop:FriendlyName="long_name" msprop:DbColumnName="long_name" msprop:design-time-name="6548f0c5-e122-429d-96c9-62b32a864992" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="player_positions" msprop:FriendlyName="player_positions" msprop:DbColumnName="player_positions" msprop:design-time-name="bad62a0e-c193-482b-855f-4200c1fc0ab5" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="overall" msprop:FriendlyName="overall" msprop:DbColumnName="overall" msprop:design-time-name="6e489e2b-4e41-47af-b79c-bcfbcadb782a" type="xs:double" minOccurs="0" />
+                      <xs:element name="potential" msprop:FriendlyName="potential" msprop:DbColumnName="potential" msprop:design-time-name="20b2cc0e-2150-49e8-9624-10b4fbf0dfba" type="xs:double" minOccurs="0" />
+                      <xs:element name="value_eur" msprop:FriendlyName="value_eur" msprop:DbColumnName="value_eur" msprop:design-time-name="6084bc27-ce60-4b1f-8e47-c383588f3d23" type="xs:double" minOccurs="0" />
+                      <xs:element name="wage_eur" msprop:FriendlyName="wage_eur" msprop:DbColumnName="wage_eur" msprop:design-time-name="9b9fba82-3d2a-488d-88ae-898d84679e2d" type="xs:double" minOccurs="0" />
+                      <xs:element name="age" msprop:FriendlyName="age" msprop:DbColumnName="age" msprop:design-time-name="113c8b4d-7b3a-4de5-89fe-a4170e4bc7f4" type="xs:double" minOccurs="0" />
+                      <xs:element name="dob" msprop:FriendlyName="dob" msprop:DbColumnName="dob" msprop:design-time-name="3723765d-ad44-4d45-b51f-f7c8ca5dd0e8" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="height_cm" msprop:FriendlyName="height_cm" msprop:DbColumnName="height_cm" msprop:design-time-name="ee898f23-0adf-48df-aa7c-23cd46bbe047" type="xs:double" minOccurs="0" />
+                      <xs:element name="weight_kg" msprop:FriendlyName="weight_kg" msprop:DbColumnName="weight_kg" msprop:design-time-name="ead402f9-b087-49a9-81b6-aa7f9026d03b" type="xs:double" minOccurs="0" />
+                      <xs:element name="club_team_id" msprop:FriendlyName="club_team_id" msprop:DbColumnName="club_team_id" msprop:design-time-name="19f4ba94-9f0c-4b00-a364-9df13b11fdac" type="xs:double" minOccurs="0" />
+                      <xs:element name="club_name" msprop:FriendlyName="club_name" msprop:DbColumnName="club_name" msprop:design-time-name="7302eec7-7b61-4a1b-bd35-f683c78dae67" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="league_name" msprop:FriendlyName="league_name" msprop:DbColumnName="league_name" msprop:design-time-name="4094b403-cede-4a2f-a654-d51ed84c1417" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="league_level" msprop:FriendlyName="league_level" msprop:DbColumnName="league_level" msprop:design-time-name="ac77a334-d08b-4c72-be44-041467390b30" type="xs:double" minOccurs="0" />
+                      <xs:element name="club_position" msprop:FriendlyName="club_position" msprop:DbColumnName="club_position" msprop:design-time-name="26cc8bc9-8560-49d8-b490-156ef08bc7b1" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_jersey_number" msprop:FriendlyName="club_jersey_number" msprop:DbColumnName="club_jersey_number" msprop:design-time-name="7a89b136-a258-43bd-8c4b-c42625d61205" type="xs:double" minOccurs="0" />
+                      <xs:element name="club_loaned_from" msprop:FriendlyName="club_loaned_from" msprop:DbColumnName="club_loaned_from" msprop:design-time-name="4db98387-24de-4975-b631-92316dde4d5d" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_joined" msprop:FriendlyName="club_joined" msprop:DbColumnName="club_joined" msprop:design-time-name="92316297-e396-415e-956f-90b551ed3cab" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="club_contract_valid_until" msprop:FriendlyName="club_contract_valid_until" msprop:DbColumnName="club_contract_valid_until" msprop:design-time-name="2b0b4efa-2608-4a21-8340-ea0af9303966" type="xs:double" minOccurs="0" />
+                      <xs:element name="nationality_id" msprop:FriendlyName="nationality_id" msprop:DbColumnName="nationality_id" msprop:design-time-name="72d4c282-8690-4275-b0a7-2b2cc3485592" type="xs:double" minOccurs="0" />
+                      <xs:element name="nationality_name" msprop:FriendlyName="nationality_name" msprop:DbColumnName="nationality_name" msprop:design-time-name="7770140b-a911-4599-a72d-4e3fd0e278b9" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nation_team_id" msprop:FriendlyName="nation_team_id" msprop:DbColumnName="nation_team_id" msprop:design-time-name="91d26ad8-b85f-4a81-abd3-5f6019796309" type="xs:double" minOccurs="0" />
+                      <xs:element name="nation_position" msprop:FriendlyName="nation_position" msprop:DbColumnName="nation_position" msprop:design-time-name="051e838c-3502-4bde-95cf-771c80ae39bc" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nation_jersey_number" msprop:FriendlyName="nation_jersey_number" msprop:DbColumnName="nation_jersey_number" msprop:design-time-name="aef80654-3100-4ca9-8d0a-d4787e44f1e0" type="xs:double" minOccurs="0" />
+                      <xs:element name="preferred_foot" msprop:FriendlyName="preferred_foot" msprop:DbColumnName="preferred_foot" msprop:design-time-name="1366f77e-a68f-497d-9cac-5758e7c44d87" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="weak_foot" msprop:FriendlyName="weak_foot" msprop:DbColumnName="weak_foot" msprop:design-time-name="1cd84d20-f437-46a9-8bae-f863321efbc3" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_moves" msprop:FriendlyName="skill_moves" msprop:DbColumnName="skill_moves" msprop:design-time-name="ce94b71b-1f8f-4d96-96c5-c97eb9a34a01" type="xs:double" minOccurs="0" />
+                      <xs:element name="international_reputation" msprop:FriendlyName="international_reputation" msprop:DbColumnName="international_reputation" msprop:design-time-name="2e374211-ee2c-4c0a-be7e-b6a427f301be" type="xs:double" minOccurs="0" />
+                      <xs:element name="work_rate" msprop:FriendlyName="work_rate" msprop:DbColumnName="work_rate" msprop:design-time-name="712ba41a-5bc2-49e0-a016-82cc8383a2bc" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="body_type" msprop:FriendlyName="body_type" msprop:DbColumnName="body_type" msprop:design-time-name="93f85ead-7e9c-4323-ba47-9d6b3aa84955" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="real_face" msprop:FriendlyName="real_face" msprop:DbColumnName="real_face" msprop:design-time-name="ad3a9e4e-b6c6-486e-aa5d-f1d52f5a6866" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="release_clause_eur" msprop:FriendlyName="release_clause_eur" msprop:DbColumnName="release_clause_eur" msprop:design-time-name="fc72a5a9-372d-4b9a-a7b4-b1dde2f8b786" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="player_tags" msprop:FriendlyName="player_tags" msprop:DbColumnName="player_tags" msprop:design-time-name="fac983f1-c171-4b9e-9a9c-84b0a20832ed" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="player_traits" msprop:FriendlyName="player_traits" msprop:DbColumnName="player_traits" msprop:design-time-name="79418581-a089-4006-9e78-b457c1ac6b47" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="pace" msprop:FriendlyName="pace" msprop:DbColumnName="pace" msprop:design-time-name="a0b30389-425a-42cd-8b39-c03d7914cfa0" type="xs:double" minOccurs="0" />
+                      <xs:element name="shooting" msprop:FriendlyName="shooting" msprop:DbColumnName="shooting" msprop:design-time-name="bd3775e9-6a48-46ab-ba37-6d6b4bbf448f" type="xs:double" minOccurs="0" />
+                      <xs:element name="passing" msprop:FriendlyName="passing" msprop:DbColumnName="passing" msprop:design-time-name="1734b511-dc9a-4516-8097-b05cb1fb1c45" type="xs:double" minOccurs="0" />
+                      <xs:element name="dribbling" msprop:FriendlyName="dribbling" msprop:DbColumnName="dribbling" msprop:design-time-name="9475480b-3c84-4512-86d7-d52e0f604aee" type="xs:double" minOccurs="0" />
+                      <xs:element name="defending" msprop:FriendlyName="defending" msprop:DbColumnName="defending" msprop:design-time-name="c396c956-abdb-4c8a-a6aa-59c44491b120" type="xs:double" minOccurs="0" />
+                      <xs:element name="physic" msprop:FriendlyName="physic" msprop:DbColumnName="physic" msprop:design-time-name="a564ab50-7602-4407-9a87-cce630088554" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_crossing" msprop:FriendlyName="attacking_crossing" msprop:DbColumnName="attacking_crossing" msprop:design-time-name="967763d3-6da1-408a-a144-eec56b773688" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_finishing" msprop:FriendlyName="attacking_finishing" msprop:DbColumnName="attacking_finishing" msprop:design-time-name="fba398fe-2d16-40f1-bdff-76f577c4e935" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_heading_accuracy" msprop:FriendlyName="attacking_heading_accuracy" msprop:DbColumnName="attacking_heading_accuracy" msprop:design-time-name="20ecbc55-e609-4ff6-a6d2-0f75e3af9e9b" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_short_passing" msprop:FriendlyName="attacking_short_passing" msprop:DbColumnName="attacking_short_passing" msprop:design-time-name="6760d1c8-6b1d-4c87-b89b-bade13b3a060" type="xs:double" minOccurs="0" />
+                      <xs:element name="attacking_volleys" msprop:FriendlyName="attacking_volleys" msprop:DbColumnName="attacking_volleys" msprop:design-time-name="a9f0d2f7-84d7-45a9-8dd3-24fbdd05c599" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_dribbling" msprop:FriendlyName="skill_dribbling" msprop:DbColumnName="skill_dribbling" msprop:design-time-name="49b6c975-2da0-46b3-ab89-462c2d9fb4d8" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_curve" msprop:FriendlyName="skill_curve" msprop:DbColumnName="skill_curve" msprop:design-time-name="d34cea9b-ca23-4888-9f63-17e87d6f9e27" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_fk_accuracy" msprop:FriendlyName="skill_fk_accuracy" msprop:DbColumnName="skill_fk_accuracy" msprop:design-time-name="9f76d4c8-8f7e-4782-8024-59eb8aeb9b2e" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_long_passing" msprop:FriendlyName="skill_long_passing" msprop:DbColumnName="skill_long_passing" msprop:design-time-name="fc44c91a-6009-402b-a84d-0648b1d40672" type="xs:double" minOccurs="0" />
+                      <xs:element name="skill_ball_control" msprop:FriendlyName="skill_ball_control" msprop:DbColumnName="skill_ball_control" msprop:design-time-name="16bc6ebf-d66d-4437-b0df-8478a2e82727" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_acceleration" msprop:FriendlyName="movement_acceleration" msprop:DbColumnName="movement_acceleration" msprop:design-time-name="b49a104a-10b7-4d19-8872-d6c5e23b547f" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_sprint_speed" msprop:FriendlyName="movement_sprint_speed" msprop:DbColumnName="movement_sprint_speed" msprop:design-time-name="07c8d2b6-f838-45a7-aca4-d92c23daf17f" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_agility" msprop:FriendlyName="movement_agility" msprop:DbColumnName="movement_agility" msprop:design-time-name="7f341d44-e36c-4627-85dc-f5908f439689" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_reactions" msprop:FriendlyName="movement_reactions" msprop:DbColumnName="movement_reactions" msprop:design-time-name="b20e4486-2c95-43de-b78f-eac12e9c1ca3" type="xs:double" minOccurs="0" />
+                      <xs:element name="movement_balance" msprop:FriendlyName="movement_balance" msprop:DbColumnName="movement_balance" msprop:design-time-name="72995a5f-f67b-4d85-acb8-35a356f70517" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_shot_power" msprop:FriendlyName="power_shot_power" msprop:DbColumnName="power_shot_power" msprop:design-time-name="3078a758-52a1-4540-a806-b133047d09ff" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_jumping" msprop:FriendlyName="power_jumping" msprop:DbColumnName="power_jumping" msprop:design-time-name="a0ed89ab-d4ee-4d24-b610-a42166b11551" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_stamina" msprop:FriendlyName="power_stamina" msprop:DbColumnName="power_stamina" msprop:design-time-name="eadbac9e-b06f-4c35-bfa8-d49dab0107e1" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_strength" msprop:FriendlyName="power_strength" msprop:DbColumnName="power_strength" msprop:design-time-name="83622161-52f8-40b3-905a-05bcdb926ee9" type="xs:double" minOccurs="0" />
+                      <xs:element name="power_long_shots" msprop:FriendlyName="power_long_shots" msprop:DbColumnName="power_long_shots" msprop:design-time-name="3a401fde-925f-4fbc-87a7-909a5d22f3a5" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_aggression" msprop:FriendlyName="mentality_aggression" msprop:DbColumnName="mentality_aggression" msprop:design-time-name="1c8452ed-4fa3-4556-829c-e021befc63da" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_interceptions" msprop:FriendlyName="mentality_interceptions" msprop:DbColumnName="mentality_interceptions" msprop:design-time-name="92186898-e3b1-4e06-932c-f7305d2d3320" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_positioning" msprop:FriendlyName="mentality_positioning" msprop:DbColumnName="mentality_positioning" msprop:design-time-name="5cdaf222-8ab0-4009-8bde-2cbe6d7e8b7c" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_vision" msprop:FriendlyName="mentality_vision" msprop:DbColumnName="mentality_vision" msprop:design-time-name="3177a22f-fbbe-4ab3-82ac-faf33f4a5134" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_penalties" msprop:FriendlyName="mentality_penalties" msprop:DbColumnName="mentality_penalties" msprop:design-time-name="fa8526c5-8d16-46c0-9976-f6cb10a3fa33" type="xs:double" minOccurs="0" />
+                      <xs:element name="mentality_composure" msprop:FriendlyName="mentality_composure" msprop:DbColumnName="mentality_composure" msprop:design-time-name="1e1e553b-b10e-4660-aac2-af002939ef3b" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="defending_marking_awareness" msprop:FriendlyName="defending_marking_awareness" msprop:DbColumnName="defending_marking_awareness" msprop:design-time-name="92119412-c9ca-448f-a5c5-d682356a55ae" type="xs:double" minOccurs="0" />
+                      <xs:element name="defending_standing_tackle" msprop:FriendlyName="defending_standing_tackle" msprop:DbColumnName="defending_standing_tackle" msprop:design-time-name="b0502b2e-46cb-49f7-bb56-63ad9ab8f797" type="xs:double" minOccurs="0" />
+                      <xs:element name="defending_sliding_tackle" msprop:FriendlyName="defending_sliding_tackle" msprop:DbColumnName="defending_sliding_tackle" msprop:design-time-name="5ecf01a3-50e2-4738-b030-459508a4fa8a" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_diving" msprop:FriendlyName="goalkeeping_diving" msprop:DbColumnName="goalkeeping_diving" msprop:design-time-name="faa99209-63e8-4d2e-ab7c-142e63ef3868" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_handling" msprop:FriendlyName="goalkeeping_handling" msprop:DbColumnName="goalkeeping_handling" msprop:design-time-name="0054f764-9af1-43f0-a5bc-ff044a1ddf70" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_kicking" msprop:FriendlyName="goalkeeping_kicking" msprop:DbColumnName="goalkeeping_kicking" msprop:design-time-name="21bbcb8e-85c4-4c9a-aa5d-8df0de0ea790" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_positioning" msprop:FriendlyName="goalkeeping_positioning" msprop:DbColumnName="goalkeeping_positioning" msprop:design-time-name="64412fbf-1922-45b2-91cc-7fa2e0680e11" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_reflexes" msprop:FriendlyName="goalkeeping_reflexes" msprop:DbColumnName="goalkeeping_reflexes" msprop:design-time-name="0d5c6174-b47c-418b-876a-f31b1a211819" type="xs:double" minOccurs="0" />
+                      <xs:element name="goalkeeping_speed" msprop:FriendlyName="goalkeeping_speed" msprop:DbColumnName="goalkeeping_speed" msprop:design-time-name="00b0714d-6a20-4824-a071-23e496ecc0ce" type="xs:double" minOccurs="0" />
+                      <xs:element name="ls" msprop:FriendlyName="ls" msprop:DbColumnName="ls" msprop:design-time-name="aaf739c3-8ee1-477e-8455-0d310fa1d46a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="st" msprop:FriendlyName="st" msprop:DbColumnName="st" msprop:design-time-name="f3c8a7d7-5b61-46e3-84af-2312ba7ea92c" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rs" msprop:FriendlyName="rs" msprop:DbColumnName="rs" msprop:design-time-name="f40db142-4b33-487f-ac57-750a69ebc4a1" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lw" msprop:FriendlyName="lw" msprop:DbColumnName="lw" msprop:design-time-name="834522c4-e2c5-4849-a5ce-8712e6a13bdc" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lf" msprop:FriendlyName="lf" msprop:DbColumnName="lf" msprop:design-time-name="a88e7822-b740-4f7b-aae4-5ad8281e5d3f" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cf" msprop:FriendlyName="cf" msprop:DbColumnName="cf" msprop:design-time-name="f52c1d69-f02f-4c23-98e9-1b5bae31aa74" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rf" msprop:FriendlyName="rf" msprop:DbColumnName="rf" msprop:design-time-name="e45fc0c4-4d64-4668-a37b-c9fd9074cad3" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rw" msprop:FriendlyName="rw" msprop:DbColumnName="rw" msprop:design-time-name="7031b014-b4c4-47d9-bef7-b69864db24f0" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lam" msprop:FriendlyName="lam" msprop:DbColumnName="lam" msprop:design-time-name="c44819c6-1b51-4dd3-b3e1-bcebbd27790e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cam" msprop:FriendlyName="cam" msprop:DbColumnName="cam" msprop:design-time-name="b0360f7a-18b9-4ad2-96a7-30cdfcb7e702" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ram" msprop:FriendlyName="ram" msprop:DbColumnName="ram" msprop:design-time-name="aa950551-8de1-4d92-8d38-a0d1a273895b" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lm" msprop:FriendlyName="lm" msprop:DbColumnName="lm" msprop:design-time-name="f8797233-5d88-4637-a3b7-0c2f4c4e10e9" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lcm" msprop:FriendlyName="lcm" msprop:DbColumnName="lcm" msprop:design-time-name="30643685-2631-4e7c-a67c-bcec0684dccb" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cm" msprop:FriendlyName="cm" msprop:DbColumnName="cm" msprop:design-time-name="f3d871bf-ea1d-4227-b761-71f87a800f1a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rcm" msprop:FriendlyName="rcm" msprop:DbColumnName="rcm" msprop:design-time-name="4c5b1cca-a60e-4e58-84b1-30e35992f3f1" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rm" msprop:FriendlyName="rm" msprop:DbColumnName="rm" msprop:design-time-name="41024f5b-7100-4e77-9bc9-00ad41ce95f6" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lwb" msprop:FriendlyName="lwb" msprop:DbColumnName="lwb" msprop:design-time-name="f1c93fbc-2327-47a1-acf9-4e33be69c3fa" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="ldm" msprop:FriendlyName="ldm" msprop:DbColumnName="ldm" msprop:design-time-name="236a186d-0644-46f2-841e-2652a564b274" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cdm" msprop:FriendlyName="cdm" msprop:DbColumnName="cdm" msprop:design-time-name="4a07258b-2628-43b6-9d6e-b296b73e489d" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rdm" msprop:FriendlyName="rdm" msprop:DbColumnName="rdm" msprop:design-time-name="065ad422-8045-40e4-bfbb-ddd89add8d23" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rwb" msprop:FriendlyName="rwb" msprop:DbColumnName="rwb" msprop:design-time-name="9a336a03-b794-4ee7-9c1b-1f7ed8e6075e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lb" msprop:FriendlyName="lb" msprop:DbColumnName="lb" msprop:design-time-name="195c2fbe-bd29-44d7-a416-0a0dc3ae7b3e" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="lcb" msprop:FriendlyName="lcb" msprop:DbColumnName="lcb" msprop:design-time-name="e6ff7dbd-6140-4dcc-ac91-3f55e03a0c8c" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="cb" msprop:FriendlyName="cb" msprop:DbColumnName="cb" msprop:design-time-name="7666f7a0-34c5-4423-b32c-d167ff0ff21c" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rcb" msprop:FriendlyName="rcb" msprop:DbColumnName="rcb" msprop:design-time-name="2c02b7e7-5223-47d3-b336-69faa8e5a5c7" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="rb" msprop:FriendlyName="rb" msprop:DbColumnName="rb" msprop:design-time-name="46976f67-4be5-4ba6-8da6-f5f3187acf87" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="gk" msprop:FriendlyName="gk" msprop:DbColumnName="gk" msprop:design-time-name="b06329e3-10dc-428a-940c-c794623fb033" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="player_face_url" msprop:FriendlyName="player_face_url" msprop:DbColumnName="player_face_url" msprop:design-time-name="fd2d08e9-c3de-4bab-8b2e-5967104fc48a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_logo_url" msprop:FriendlyName="club_logo_url" msprop:DbColumnName="club_logo_url" msprop:design-time-name="86d0d137-e4ad-42b8-822f-2cef56678ebe" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_flag_url" msprop:FriendlyName="club_flag_url" msprop:DbColumnName="club_flag_url" msprop:design-time-name="2647fc39-59fd-4ee3-9247-4407a0b5df15" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nation_logo_url" msprop:FriendlyName="nation_logo_url" msprop:DbColumnName="nation_logo_url" msprop:design-time-name="d94bbf96-2742-48e1-8cbf-be24fc5b8555" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="nation_flag_url" msprop:FriendlyName="nation_flag_url" msprop:DbColumnName="nation_flag_url" msprop:design-time-name="53a97a06-6014-4f9f-945e-043fdca6216a" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_nameClub" msprop:design-time-name="2e59970e-745d-4790-86e5-259c81f1a6f0" msprop:FriendlyName="nameClub" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="nameClub">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="club_name" msprop:FriendlyName="club_name" msprop:DbColumnName="club_name" msprop:design-time-name="084567ad-258e-4225-a9fc-c137ad7e1182" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_Fact" msprop:design-time-name="364e3cc4-b749-4a5a-8b29-136c6c375f50" msprop:FriendlyName="Fact" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="Fact">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="player_positions" msprop:FriendlyName="player_positions" msprop:DbColumnName="player_positions" msprop:design-time-name="6ff0c452-f911-45ee-93f9-2e25b1549435" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="dob" msprop:FriendlyName="dob" msprop:DbColumnName="dob" msprop:design-time-name="13a40059-e815-4d64-a347-e01505f7a371" type="xs:dateTime" minOccurs="0" />
+                      <xs:element name="club_name" msprop:FriendlyName="club_name" msprop:DbColumnName="club_name" msprop:design-time-name="6df9406a-87b1-411e-a410-8eca07591633" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="club_position" msprop:FriendlyName="club_position" msprop:DbColumnName="club_position" msprop:design-time-name="cda4049c-08de-4407-aad7-ce375aff50e0" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <Wasehouse xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>

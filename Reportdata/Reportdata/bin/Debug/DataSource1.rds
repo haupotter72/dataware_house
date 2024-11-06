@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="DataSource1">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=LAPTOP-9H355TDU\SQLEXPRESS;Initial Catalog=wasehouse</ConnectString>
+    <Prompt>Specify a user name and password for data source DataSource1:</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>95113f8a-41af-4010-b34e-26de01c394d6</DataSourceID>
+</RptDataSource>
