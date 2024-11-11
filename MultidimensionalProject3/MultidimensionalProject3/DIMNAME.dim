@@ -1,0 +1,365 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="93015a66-4841-4b5a-9595-03d5e04bc451" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIMNAME</ID>
+  <Name>DIMNAME</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6d82b502-57e4-47e6-8439-2cd7790ffbc8">
+    <DataSourceViewID>Datawarehousetest</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="60a5ce61-3895-4727-883b-8001c9e0a766">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="5b47969c-637c-4db3-9828-6e599a8c60cd">
+      <ID>Sofifa Id</ID>
+      <Name>Sofifa Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0d0bd355-2c18-40f9-ba83-65ebb20c334e">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="893859ac-cf53-4301-a3cf-865e509a5c06">
+            <TableID>dbo_DIMNAME</TableID>
+            <ColumnID>sofifa_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c3e1f500-40f9-48c8-81a8-33546169f9bc">
+          <AttributeID>Short Name</AttributeID>
+          <Name>Short Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="45880b47-b845-485b-8adb-34979d7269f3">
+          <AttributeID>Player Url</AttributeID>
+          <Name>Player Url</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6d0a4f0c-fe34-487d-b32c-919fc1b25ba4">
+          <AttributeID>Long Name</AttributeID>
+          <Name>Long Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="68889dc9-6096-4b6c-8d85-385e4ecc208d">
+          <AttributeID>DIMOVR - Player Url</AttributeID>
+          <Name>DIMOVR - Player Url</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="596484c8-9bb6-41d8-b4ab-698268447b92">
+          <AttributeID>DIMOVR - Short Name</AttributeID>
+          <Name>DIMOVR - Short Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dbb5e052-8751-44a6-a123-146dfef3d682">
+          <AttributeID>Overall</AttributeID>
+          <Name>Overall</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1af69e1c-7d49-4da5-87f6-fbe65ec0baa2">
+          <AttributeID>Player Positions</AttributeID>
+          <Name>Player Positions</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ff6ec5ea-1890-41a5-bbaa-8efed4e184b9">
+          <AttributeID>Wage Eur</AttributeID>
+          <Name>Wage Eur</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d6c59ca9-b25b-468c-b6dd-2dcf425bf1ae">
+          <AttributeID>Age</AttributeID>
+          <Name>Age</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3d7a19a1-1eef-4431-b7df-f23abbc39ec5">
+          <AttributeID>Dob</AttributeID>
+          <Name>Dob</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cafa8d48-041c-447b-b774-e53bb7c42739">
+          <AttributeID>Club Name</AttributeID>
+          <Name>Club Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0f0e0bd4-5b2e-439b-b105-140457f17468">
+          <AttributeID>League Level</AttributeID>
+          <Name>League Level</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b6fdb193-58bc-402b-a4b5-0dde8678f22d">
+          <AttributeID>Work Rate</AttributeID>
+          <Name>Work Rate</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="108b2117-f5aa-48b1-9964-9b93d82ea81d">
+          <AttributeID>Body Type</AttributeID>
+          <Name>Body Type</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="71d8c3fe-ed81-4a1a-bcdf-a4391415a013">
+      <ID>Short Name</ID>
+      <Name>Short Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="89e9a4b2-c14b-4331-9342-a3938692cdb5">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f0531102-22d5-48cf-9f3c-5716e0e7a014">
+            <TableID>dbo_DIMNAME</TableID>
+            <ColumnID>short_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5a03f836-5708-47d7-bfe8-84909b333b0c">
+      <ID>Player Url</ID>
+      <Name>Player Url</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b202ea95-7ab7-4a9a-8d65-072b959a59ab">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4d48b506-a43b-45ab-9c2e-eeee856e0bad">
+            <TableID>dbo_DIMNAME</TableID>
+            <ColumnID>player_url</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cb9013f9-7272-4b67-bf84-1c36012ec497">
+      <ID>Long Name</ID>
+      <Name>Long Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5bb0ddd5-c993-492a-b689-447d6cfa4c9e">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f4c6b1b8-c17b-400f-88ab-d11bdba4041f">
+            <TableID>dbo_DIMNAME</TableID>
+            <ColumnID>long_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8d3284d4-b523-410b-a74e-ccc7baf9aa3d">
+      <ID>DIMOVR - Player Url</ID>
+      <Name>DIMOVR - Player Url</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="db00372b-cdf0-4bcb-948b-d192e3c9457e">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c563e7d-0f53-43f8-bfca-bca00d52b42e">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>player_url</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="01347418-dcb3-4f89-a865-9c9283e81425">
+      <ID>DIMOVR - Short Name</ID>
+      <Name>DIMOVR - Short Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="da158b95-52cb-4893-b15e-25d726e8ac6b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2d07afee-ea08-432e-8170-c41df71c3353">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>short_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6269e310-8321-431c-8996-18e3f0339bef">
+      <ID>Overall</ID>
+      <Name>Overall</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2f1cdbbe-ea6c-4b16-8506-0b69b69e2941">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="354e4b2b-8924-4931-81f3-96a814bd0366">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>overall</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="994f3f01-e29a-44ab-be5a-15610452ef02">
+      <ID>Player Positions</ID>
+      <Name>Player Positions</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9901701e-a5f7-452d-9272-eca65c3c057f">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="06e3874a-5591-4ca1-9698-28b527d8462d">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>player_positions</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3e414780-c794-4dcb-8395-e2ee1db8f881">
+      <ID>Wage Eur</ID>
+      <Name>Wage Eur</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="14841f84-992a-40c8-aee3-7d39c23373f1">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5d3e083a-24fd-4efc-968d-e10df6a022ae">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>wage_eur</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c0554af8-f56e-48e6-befd-2dd3039a91a6">
+      <ID>Age</ID>
+      <Name>Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f6309995-6508-4398-96bb-db2f42a41dad">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0691c23a-df0f-4935-aafb-4725ada9711d">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fcf6bebe-d671-4297-a9b7-3dd3dc6f0d75">
+      <ID>Dob</ID>
+      <Name>Dob</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f089a042-222c-4ab9-8a57-724c16f0eb81">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee130c67-218e-448f-8657-7b33408d3d95">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>dob</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2f8b5cef-80b4-4226-9c4f-68611eeccd47">
+      <ID>Club Name</ID>
+      <Name>Club Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f4afbf4a-729c-4b2a-b4ca-859296bf7f04">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f00151d7-ca78-4ccd-b289-4eda8cb696e6">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>club_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="748c94a4-4c10-4371-ab16-221b80d66e33">
+      <ID>League Level</ID>
+      <Name>League Level</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b009bbf5-11dc-4788-a64f-327f481308ec">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f77e7cfd-0342-4abd-b121-34b0236f35e7">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>league_level</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1259f4c5-4251-463f-8373-6340ad188cbb">
+      <ID>Work Rate</ID>
+      <Name>Work Rate</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="36a135d5-0706-4697-84db-533a71a151d2">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5a163837-f3b7-42f9-9d88-43468fab2d31">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>work_rate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="560a4f3e-f6c2-4e22-8a61-780ad7086e1d">
+      <ID>Body Type</ID>
+      <Name>Body Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="256aa71d-a979-4863-b5bc-6c9b456950e4">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a2cc81bd-e2f8-4535-a4e4-e23084324473">
+            <TableID>dbo_DIMOVR</TableID>
+            <ColumnID>body_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,304 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c0b5931e-1769-4606-851a-509c9863e672" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Datawarehousetest</ID>
+  <Name>Datawarehousetest</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Datawarehousetest</DataSourceID>
+  <Schema>
+    <xs:schema id="Datawarehousetest" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Datawarehousetest" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="70f08083-86d6-44e5-905e-850c377be5e4">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_DIMNAME" msprop:DbTableName="DIMNAME" msprop:FriendlyName="DIMNAME" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="4a6253b1-d67b-4020-ab91-5fb5a0823428">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="sofifa_id" msprop:FriendlyName="sofifa_id" msprop:DbColumnName="sofifa_id" msprop:design-time-name="5cab9d1c-43cc-4050-ac76-3036704dcea7" type="xs:double" />
+                  <xs:element name="short_name" msprop:FriendlyName="short_name" msprop:DbColumnName="short_name" msprop:design-time-name="8f2cecb4-8306-41d3-b604-4797da0523ec" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="player_url" msprop:FriendlyName="player_url" msprop:DbColumnName="player_url" msprop:design-time-name="3c0a95d9-8794-4946-a463-51224166b938" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="long_name" msprop:FriendlyName="long_name" msprop:DbColumnName="long_name" msprop:design-time-name="52eac2fd-cff9-44a8-9bc9-b0a76d16ebc3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIMOVR" msprop:DbTableName="DIMOVR" msprop:FriendlyName="DIMOVR" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="d09dafe7-1a5b-4a26-8b22-e90e3787ad6f">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="sofifa_id" msprop:FriendlyName="sofifa_id" msprop:DbColumnName="sofifa_id" msprop:design-time-name="530b9305-90ce-4737-8a1a-7711bfb1ceff" type="xs:double" />
+                  <xs:element name="player_url" msprop:FriendlyName="player_url" msprop:DbColumnName="player_url" msprop:design-time-name="0b2b9248-74a5-405e-997c-a9b95a35c0c3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="short_name" msprop:FriendlyName="short_name" msprop:DbColumnName="short_name" msprop:design-time-name="6f6556ba-2f80-4e32-a184-10fddecaf986" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="overall" msprop:FriendlyName="overall" msprop:DbColumnName="overall" msprop:design-time-name="7bc01a67-7b19-4a08-bdcb-c4257a52196d" type="xs:double" minOccurs="0" />
+                  <xs:element name="player_positions" msprop:FriendlyName="player_positions" msprop:DbColumnName="player_positions" msprop:design-time-name="66e77a34-e444-48b4-b80f-0aeb1cd657e1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="wage_eur" msprop:FriendlyName="wage_eur" msprop:DbColumnName="wage_eur" msprop:design-time-name="b76ef0d3-9dd3-4a4c-b9c3-4329db1fbc55" type="xs:double" minOccurs="0" />
+                  <xs:element name="age" msprop:FriendlyName="age" msprop:DbColumnName="age" msprop:design-time-name="f9fd060c-e0c5-4851-8532-3dc7acc03e99" type="xs:double" minOccurs="0" />
+                  <xs:element name="dob" msprop:FriendlyName="dob" msprop:DbColumnName="dob" msprop:design-time-name="7dfc2647-e40e-48b8-bec2-3ebce9549bc4" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="club_name" msprop:FriendlyName="club_name" msprop:DbColumnName="club_name" msprop:design-time-name="bd54e577-9f06-410d-a6eb-196c0fc67448" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="league_level" msprop:FriendlyName="league_level" msprop:DbColumnName="league_level" msprop:design-time-name="85390088-52a2-4078-972b-e401389649be" type="xs:double" minOccurs="0" />
+                  <xs:element name="work_rate" msprop:FriendlyName="work_rate" msprop:DbColumnName="work_rate" msprop:design-time-name="65b7002d-c810-4ebb-9cdb-c76fdd989954" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="body_type" msprop:FriendlyName="body_type" msprop:DbColumnName="body_type" msprop:design-time-name="77268257-7e3b-4363-a4e2-a421759383a2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIMPOSITION" msprop:DbTableName="DIMPOSITION" msprop:FriendlyName="DIMPOSITION" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="b6abee09-be48-4055-a65e-51362086fea3">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="sofifa_id" msprop:FriendlyName="sofifa_id" msprop:DbColumnName="sofifa_id" msprop:design-time-name="0e4d843c-840b-4a62-bc6f-c0c4abb7cf86" type="xs:double" />
+                  <xs:element name="short_name" msprop:FriendlyName="short_name" msprop:DbColumnName="short_name" msprop:design-time-name="fec9e570-20c1-42be-982e-e720ce6a9b32" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="player_url" msprop:FriendlyName="player_url" msprop:DbColumnName="player_url" msprop:design-time-name="1fa5e85c-be8f-46d0-98ce-6fa6c7905659" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="long_name" msprop:FriendlyName="long_name" msprop:DbColumnName="long_name" msprop:design-time-name="3ffec1b8-d7da-4216-96ab-671f4465fc0c" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="player_positions" msprop:FriendlyName="player_positions" msprop:DbColumnName="player_positions" msprop:design-time-name="25b4754c-6203-4449-8a2d-e5f10f9163a4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIMSKILL" msprop:DbTableName="DIMSKILL" msprop:FriendlyName="DIMSKILL" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="56858e75-3940-410d-b4b5-29a0310b3e1b">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="sofifa_id" msprop:FriendlyName="sofifa_id" msprop:DbColumnName="sofifa_id" msprop:design-time-name="87291a66-079f-497f-8add-06f3e9b13f15" type="xs:double" minOccurs="0" />
+                  <xs:element name="player_url" msprop:FriendlyName="player_url" msprop:DbColumnName="player_url" msprop:design-time-name="f3c0f35e-43ec-46d3-bcf6-b47b7577d749">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="short_name" msprop:FriendlyName="short_name" msprop:DbColumnName="short_name" msprop:design-time-name="5878471e-969c-402f-b7f5-74ddbc77923a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="player_positions" msprop:FriendlyName="player_positions" msprop:DbColumnName="player_positions" msprop:design-time-name="03f8c090-52de-474e-ba3f-2b40981aa36e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="overall" msprop:FriendlyName="overall" msprop:DbColumnName="overall" msprop:design-time-name="80568267-364a-46a1-974d-61a7ec314603" type="xs:double" minOccurs="0" />
+                  <xs:element name="weak_foot" msprop:FriendlyName="weak_foot" msprop:DbColumnName="weak_foot" msprop:design-time-name="e86cfa81-ad66-4a58-b466-285c70a937c5" type="xs:double" minOccurs="0" />
+                  <xs:element name="preferred_foot" msprop:FriendlyName="preferred_foot" msprop:DbColumnName="preferred_foot" msprop:design-time-name="b2502fc1-73f1-480c-89ad-f5c1a9c0b64d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="skill_moves" msprop:FriendlyName="skill_moves" msprop:DbColumnName="skill_moves" msprop:design-time-name="d5d6f085-e4e5-4e92-8f2e-7b139d11b078" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FACTPLAYER" msprop:DbTableName="FACTPLAYER" msprop:FriendlyName="FACTPLAYER" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="5d2ab070-8d42-4193-aa1e-fbee50f9d83b">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="sofifa_id" msprop:FriendlyName="sofifa_id" msprop:DbColumnName="sofifa_id" msprop:design-time-name="6c99da38-b0c4-4f0d-b6c6-5392470b4391" type="xs:double" />
+                  <xs:element name="short_name" msprop:FriendlyName="short_name" msprop:DbColumnName="short_name" msprop:design-time-name="d69f3fce-e66a-4c33-98db-d5ed73ccab75" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="player_url" msprop:FriendlyName="player_url" msprop:DbColumnName="player_url" msprop:design-time-name="ca2bf41a-fb8d-4a5b-9bc7-d626efb60fea" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="long_name" msprop:FriendlyName="long_name" msprop:DbColumnName="long_name" msprop:design-time-name="821a7d2c-dcbb-4474-bb0a-04c99d504e84" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="player_positions" msprop:FriendlyName="player_positions" msprop:DbColumnName="player_positions" msprop:design-time-name="36d33f4e-5f11-49aa-a9a1-dd0e84541607" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="overall" msprop:FriendlyName="overall" msprop:DbColumnName="overall" msprop:design-time-name="62b9349e-b655-4546-bf66-55ea65a96bfd" type="xs:double" minOccurs="0" />
+                  <xs:element name="potential" msprop:FriendlyName="potential" msprop:DbColumnName="potential" msprop:design-time-name="6a02a44a-40c9-45d7-ab8c-0babde44ce97" type="xs:double" minOccurs="0" />
+                  <xs:element name="value_eur" msprop:FriendlyName="value_eur" msprop:DbColumnName="value_eur" msprop:design-time-name="e320116b-b0dc-4df1-a267-63f489581be5" type="xs:double" minOccurs="0" />
+                  <xs:element name="wage_eur" msprop:FriendlyName="wage_eur" msprop:DbColumnName="wage_eur" msprop:design-time-name="1cf934e7-9077-4da0-bbb2-8e29c0cf8010" type="xs:double" minOccurs="0" />
+                  <xs:element name="weak_foot" msprop:FriendlyName="weak_foot" msprop:DbColumnName="weak_foot" msprop:design-time-name="fee3a2b0-da31-461c-b156-f965b09ce701" type="xs:double" minOccurs="0" />
+                  <xs:element name="preferred_foot" msprop:FriendlyName="preferred_foot" msprop:DbColumnName="preferred_foot" msprop:design-time-name="a33c374c-127b-4ad0-b8cf-668468416a5f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="skill_moves" msprop:FriendlyName="skill_moves" msprop:DbColumnName="skill_moves" msprop:design-time-name="42b4b761-c40a-439a-822d-c32b62882db7" type="xs:double" minOccurs="0" />
+                  <xs:element name="body_type" msprop:FriendlyName="body_type" msprop:DbColumnName="body_type" msprop:design-time-name="949d68b8-6217-4097-9e41-256109ae99ea" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIMNAME" />
+          <xs:field xpath="sofifa_id" />
+        </xs:unique>
+        <xs:unique name="dbo_DIMOVR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIMOVR" />
+          <xs:field xpath="sofifa_id" />
+        </xs:unique>
+        <xs:unique name="dbo_DIMPOSITION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIMPOSITION" />
+          <xs:field xpath="sofifa_id" />
+        </xs:unique>
+        <xs:unique name="dbo_DIMSKILL_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIMSKILL" />
+          <xs:field xpath="player_url" />
+        </xs:unique>
+        <xs:unique name="dbo_FACTPLAYER_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FACTPLAYER" />
+          <xs:field xpath="sofifa_id" />
+        </xs:unique>
+        <xs:keyref name="fk_fact_Position" refer="dbo_DIMPOSITION_Constraint1">
+          <xs:selector xpath=".//dbo_FACTPLAYER" />
+          <xs:field xpath="sofifa_id" />
+        </xs:keyref>
+        <xs:keyref name="fk_fact_Skill" refer="dbo_DIMSKILL_Constraint1">
+          <xs:selector xpath=".//dbo_FACTPLAYER" />
+          <xs:field xpath="player_url" />
+        </xs:keyref>
+        <xs:keyref name="fk_fact_Name" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FACTPLAYER" />
+          <xs:field xpath="sofifa_id" />
+        </xs:keyref>
+        <xs:keyref name="fk_fact_url" refer="dbo_DIMOVR_Constraint1">
+          <xs:selector xpath=".//dbo_DIMPOSITION" />
+          <xs:field xpath="sofifa_id" />
+        </xs:keyref>
+        <xs:keyref name="fk_fact_ovrname" refer="dbo_DIMOVR_Constraint1">
+          <xs:selector xpath=".//dbo_DIMNAME" />
+          <xs:field xpath="sofifa_id" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Datawarehousetest xmlns="" />
+  </Schema>
+</DataSourceView>
